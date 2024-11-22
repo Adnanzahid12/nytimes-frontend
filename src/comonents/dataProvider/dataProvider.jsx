@@ -10,7 +10,7 @@ const DataProvider = ({ children }) => {
     const handleFetch = async () => {
         try {
             // Fetching the data from nytimes
-            const response = await fetch(`http://localhost:5000/data?query=${query}`);
+            const response = await fetch(`https://nytimes-backend-maby.onrender.com/data?query=${query}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch articles');
             }
